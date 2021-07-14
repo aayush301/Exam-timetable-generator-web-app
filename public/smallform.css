@@ -1,0 +1,79 @@
+.container
+{
+    /* display: block; */
+    margin: 40px auto;
+    width: 75%;
+}
+
+form .form-input
+{
+    outline: none;
+    width: 50vw;
+    margin: 20px 20px;
+    padding: 0 10px;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid silver;
+    font-size: 17px;
+    box-shadow: 0px 0.3px 0.9px rgb(0 0 0 / 12%), 0px 1.6px 3.6px rgb(0 0 0 / 12%);
+    /* box-shadow: 0 0 0 1px rgba(0,0,0,.1),0 2px 4px 1px rgba(0,0,0,.18); */
+    transition: border-color 0.5s;
+}
+
+
+form .form-input:hover
+{
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0);
+}
+
+form .form-input:focus
+{
+    border: 2px solid dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+form .btn
+{
+    /* margin: 40px auto;
+    margin-bottom: 20px; */
+    width: 200px;
+    height:40px;
+    border: none;
+    outline: none;
+    background: blue;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+form .btn:hover
+{
+    opacity: .8;
+}
+
+ul
+{
+    /* list-style-type: disc; */
+    list-style-position: inside;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 20px;
+    background-color: rgb(228, 222, 222);
+    font-size: 24px;
+}
+
+ul li
+{
+    padding: 10px;
+}
+
+ul li:hover
+{
+    background-color: rgb(202, 199, 199);
+}

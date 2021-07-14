@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/form.css" />
+</head>
+<body>
+    {{>header}}
+    <div class="main">
+        <div class="container">
+            <form action="/addStudent" method="post">
+                <h2>Add Student</h2>
+                <div class="form-group">
+                    <label>Student name:</label>
+                    <input type="text" class="form-input" name="name" placeholder="Enter student name" autocomplete="off" id='station_id'
+                        required autofocus>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label>Select courses:</label>
+                    {{#each courses}}
+                        <label class="checkbox" for={{course}}>
+                            <input type="checkbox" id={{course}} name='courses' value='{{course}}'>
+                            <label for={{course}}>{{course}}</label>
+                        </label>
+                    {{/each}}
+                </div>
+                
+                <input type="submit" class="btn" value="Add">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

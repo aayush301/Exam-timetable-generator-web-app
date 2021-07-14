@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/smallform.css" />
+</head>
+<body>
+    {{>header}}
+    <div class="container">
+        <form action="/addCourse" method="post">
+            <input type="text" class="form-input" name="course" placeholder="Add new course" autocomplete="off" required autofocus>
+            <input type="submit" class="btn" value="Add">
+        </form>
+    </div>
+
+    <ul>
+    <span>List of Courses:</span>        
+        {{#unless courses}}
+            <span>No courses added yet</span>
+        {{/unless}}
+
+        {{#each courses}}
+            <li>{{course}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>

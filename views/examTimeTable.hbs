@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Time Table</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/table.css" />
+    <link rel="stylesheet" type="text/css" href="/smallform.css" />
+    <style>
+        table { display: table; }
+        table tr { display: table-cell; }
+        table tr td { display: block; height: 90px; overflow-y: scroll; }
+        ::-webkit-scrollbar{width: 0;}
+        .container form .form-input { width: 150px; }
+    </style>
+</head>
+
+<body>
+    {{>header}}
+    <div class="container">
+        <form action="/generateTimeTable" method="post">
+            <label>Enter max. no. of courses in a day</label>
+            <input type="number" min='1' class="form-input" name="maxCourses" autocomplete="off" required autofocus>
+            <input type="submit" class="btn" value="Generate">
+        </form>
+    </div>
+  
+    {{#if coursesTimeTable}}<h3>Exam Time Table</h3>{{/if}}
+    <div class="tableContainer">
+        <table>
+            {{#each coursesTimeTable}}
+            <tr>
+                <td class="header">Day {{increment @index}}</td>      {{!-- increment is registered as helper in index.js--}}
+                {{#each this}}
+                    <td>{{this}}</td>
+                {{/each}}
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</body>
+
+</html>

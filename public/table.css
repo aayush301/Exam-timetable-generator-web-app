@@ -1,0 +1,59 @@
+.tableContainer
+{
+    overflow-x: auto;
+    margin: 0px 60px 100px 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table
+{
+    margin: auto;
+    margin-top: 30px;
+    border-collapse: collapse;
+    width:85%;
+    height:auto;
+    border: 1px solid #bdc3c7;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0);
+    background-color: white;
+}
+
+table caption
+{
+    color: orangered;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+th,td
+{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th
+{
+    font-weight: 500;
+}
+
+.header
+{
+    background-color: blue;
+    color: #fff;
+}
+
+tr:hover
+{
+    background-color: #f5f5f5;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0);
+    transition: all .2s ease-in;
+}
+
+.header:hover
+{
+    background-color: blue;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0);
+}

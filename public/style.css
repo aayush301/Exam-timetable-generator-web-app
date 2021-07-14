@@ -1,0 +1,71 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-size: 20px;
+    font-family: 'Segoe UI', 'Segoe WP', system-ui, Arial, Sans-Serif;
+    background-color: rgb(243, 243, 234);
+}
+
+h3
+{
+    color: orangered;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* header */
+header
+{
+    background-color: black;
+    color: white;
+    margin-bottom: 60px;
+}
+
+#heading
+{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.navbar
+{
+    padding: 0;
+    margin: 10px;
+}
+
+.navbar a
+{
+    font-size: 24px;        
+    padding: 20px;
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+}
+
+.navbar a:hover
+{
+    transform: scale(1.02);
+    color: rgb(229, 147, 147);
+    transition: all .2s ease-in-out;
+}
+
+@media (min-width:550px)
+{
+    .rightLinks
+    {
+        float: right;
+    }
+}
+
+.main
+{
+    padding: 20px 10px 200px 10px;
+}

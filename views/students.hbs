@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/table.css" />
+    <style>
+        .btn
+        {
+            display: block;
+            padding: 10px;
+            margin: 30px 25px 10px auto;
+            width: 220px;
+            height:50px;
+            border: none;
+            background: green;
+            text-transform: uppercase;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn:hover
+        {
+            opacity: .8;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0);
+            transition: all.2s ease-in;
+        }
+
+    </style>
+</head>
+
+<body>
+    {{>header}}
+    <a class="btn" href="/addStudent">Add new Student</a>
+    
+    <h3>Students List</h3>
+    <div class="tableContainer">
+        <table>
+            <tr class="header">
+                <th></th>
+                {{#each courses}}
+                    <th>{{course}}</th>
+                {{/each}}
+            </tr>
+            
+            {{#unless students}}
+                <tr style="column-span: all;"><td>No students added yet</td></tr>
+            {{/unless}}
+
+            {{#each students}}
+                <tr>
+                    {{#each this}}
+                        {{#if @index}}
+                            {{#if this}}
+                                <td style="text-align: center;">&#10003</td>
+                            {{else}}
+                                <td></td>
+                            {{/if}}
+                        {{else}}
+                            <td>{{this}}</td>
+                        {{/if}}
+                    {{/each}}
+                </tr>
+            {{/each}}
+
+        </table>
+    </div>
+
+</body>
+
+</html>
